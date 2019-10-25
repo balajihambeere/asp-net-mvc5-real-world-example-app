@@ -1,0 +1,98 @@
+﻿@model Connect2Library.Models.BookIssue
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BookIssue</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateIssued)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateIssued)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateReturn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateReturn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateReturned)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateReturned)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookIssuedStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookIssuedStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FineRange)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FineRange)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastModifiedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastModifiedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastModifiedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastModifiedOn)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BookIssueID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

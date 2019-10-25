@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Connect2Library.Models.BookIssue>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BookCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateIssued)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateReturn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateReturned)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookIssuedStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FineRange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastModifiedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastModifiedOn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateIssued)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateReturn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateReturned)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookIssuedStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FineRange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastModifiedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastModifiedOn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BookIssueID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BookIssueID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BookIssueID })
+        </td>
+    </tr>
+}
+
+</table>
